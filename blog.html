@@ -1,0 +1,34 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+---
+<section class="section page-head">
+  <div class="wrap">
+    <p class="eyebrow">Writing</p>
+    <h1 class="page-title">Notes on Salesforce</h1>
+    <p class="lede">Practical write-ups from real engagements — data modelling, automation, and the organisational stuff that decides whether any of it sticks.</p>
+    <p class="feed-note"><a class="link-arrow" href="{{ '/feed.xml' | relative_url }}">Subscribe via RSS <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></p>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="wrap">
+    {%- assign all_tags = site.tags | sort -%}
+    {%- if all_tags.size > 0 -%}
+    <div class="filters" role="group" aria-label="Filter posts by topic">
+      <button class="filter is-active" type="button" data-filter="all">All</button>
+      {%- for t in all_tags -%}
+      <button class="filter" type="button" data-filter="{{ t[0] }}">{{ t[0] }}</button>
+      {%- endfor -%}
+    </div>
+    {%- endif -%}
+
+    <div class="grid grid-posts" id="post-grid">
+      {%- for post in site.posts -%}
+        {% include post-card.html post=post %}
+      {%- endfor -%}
+    </div>
+    <p class="empty-state" id="empty-state" hidden>No posts under that topic yet.</p>
+  </div>
+</section>

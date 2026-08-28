@@ -1,0 +1,15 @@
+{%- assign post = include.post -%}
+<article class="card post-card"{% if post.tags %} data-tags="{{ post.tags | join: '|' }}"{% endif %}>
+  <p class="post-card-meta">
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %b %Y" }}</time>
+    <span aria-hidden="true">·</span>
+    <span>{{ post.content | number_of_words | divided_by: 220 | plus: 1 }} min read</span>
+  </p>
+  <h3 class="post-card-title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+  <p class="post-card-excerpt">{{ post.description | default: post.excerpt | strip_html | truncate: 165 }}</p>
+  {%- if post.tags and post.tags.size > 0 -%}
+  <ul class="tag-list">
+    {%- for t in post.tags -%}<li class="tag">{{ t }}</li>{%- endfor -%}
+  </ul>
+  {%- endif -%}
+</article>

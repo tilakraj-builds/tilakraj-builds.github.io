@@ -1,0 +1,31 @@
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}">
+      <span class="brand-mark" aria-hidden="true">{{ site.author.name | slice: 0 }}</span>
+      <span class="brand-text">
+        <span class="brand-name">{{ site.author.name }}</span>
+        <span class="brand-role">{{ site.author.role }}</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+      <span class="nav-toggle-bar"></span>
+      <span class="nav-toggle-bar"></span>
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      {%- assign p = page.url -%}
+      <a href="{{ '/' | relative_url }}"        {% if p == '/' %}aria-current="page"{% endif %}>Home</a>
+      <a href="{{ '/work/' | relative_url }}"   {% if p contains '/work' %}aria-current="page"{% endif %}>Work</a>
+      <a href="{{ '/blog/' | relative_url }}"   {% if p contains '/blog' %}aria-current="page"{% endif %}>Blog</a>
+      <a href="{{ '/about/' | relative_url }}"  {% if p contains '/about' %}aria-current="page"{% endif %}>About</a>
+      <a class="nav-cta" href="{{ '/contact/' | relative_url }}">Get in touch</a>
+      <button class="theme-toggle" type="button" aria-label="Switch theme" title="Switch theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.6v2.2M12 19.2v2.2M21.4 12h-2.2M4.8 12H2.6M18.6 5.4l-1.6 1.6M7 17l-1.6 1.6M18.6 18.6L17 17M7 7L5.4 5.4"/></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.6A8.6 8.6 0 0 1 9.4 3.5a8.6 8.6 0 1 0 11.1 11.1Z"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>

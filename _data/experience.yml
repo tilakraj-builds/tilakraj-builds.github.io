@@ -1,0 +1,24 @@
+# Reverse-chronological. Set `end: Present` for your current role.
+- role: Salesforce Consultant
+  company: Independent
+  start: 2024
+  end: Present
+  summary: >-
+    Advising mid-market and enterprise teams on Sales Cloud, Service Cloud, and
+    platform architecture — from discovery through go-live and admin handover.
+
+- role: Senior Salesforce Developer
+  company: Company Name
+  start: 2022
+  end: 2024
+  summary: >-
+    Led Apex and Lightning Web Component development across a multi-org
+    environment, with a focus on integration and release engineering.
+
+- role: Salesforce Administrator
+  company: Company Name
+  start: 2020
+  end: 2022
+  summary: >-
+    Owned day-to-day administration, reporting, and user enablement for a
+    growing sales organisation.

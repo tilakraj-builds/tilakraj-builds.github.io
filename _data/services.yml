@@ -1,0 +1,40 @@
+# What you offer. Add, remove, or reorder freely.
+- title: Sales Cloud implementation
+  icon: pipeline
+  summary: >-
+    Opportunity stages that match how your team actually sells, forecasting
+    people trust, and a pipeline you can report on without exporting to a spreadsheet.
+  points:
+    - Lead-to-cash process design
+    - Forecasting & pipeline hygiene
+    - Territory and quota setup
+
+- title: Service Cloud & support ops
+  icon: support
+  summary: >-
+    Case routing, SLAs, and knowledge that shorten handle time instead of
+    adding clicks to it.
+  points:
+    - Omni-channel routing
+    - Entitlements & SLA milestones
+    - Agent console optimisation
+
+- title: Automation & Flow rescue
+  icon: flow
+  summary: >-
+    Untangling the workflow rules, process builders, and half-finished Flows
+    that accumulated over the years — into something documented and bulk-safe.
+  points:
+    - Legacy automation migration
+    - Flow performance & bulkification
+    - Apex where Flow genuinely isn't enough
+
+- title: Data model & integration
+  icon: data
+  summary: >-
+    Objects and relationships that hold up as you grow, plus clean integrations
+    with the rest of your stack.
+  points:
+    - Object & sharing model design
+    - Data quality and de-duplication
+    - REST/Platform Event integrations

@@ -1,0 +1,53 @@
+# Case studies. The strongest ones name a real, measurable outcome.
+# Replace these with your own engagements.
+- title: Lead-to-cash rebuild for a B2B SaaS org
+  client: Mid-market SaaS · 180 seats
+  year: 2025
+  tags: [Sales Cloud, CPQ, Flow]
+  featured: true
+  problem: >-
+    Sales, finance, and CS each kept their own version of the truth. Quotes were
+    built in spreadsheets, and renewal dates lived in a shared calendar. Forecast
+    accuracy was under 50% and nobody trusted the pipeline report.
+  work: >-
+    Redesigned the opportunity and product data model, moved quoting onto CPQ,
+    and replaced 14 overlapping workflow rules with 3 documented record-triggered
+    Flows. Built a renewal object with automated milestone alerts.
+  outcome:
+    - "Forecast accuracy up to 87% within two quarters"
+    - "Quote turnaround cut from 3 days to under 4 hours"
+    - "14 legacy automations retired, 0 unhandled bulk failures since"
+
+- title: Service Cloud rollout for a regional insurer
+  client: Insurance · 400+ agents
+  year: 2024
+  tags: [Service Cloud, Omni-Channel, Knowledge]
+  featured: true
+  problem: >-
+    Support ran on a shared inbox and a legacy ticketing tool. No SLA visibility,
+    no routing logic, and escalations happened over instant messages.
+  work: >-
+    Implemented Service Cloud with omni-channel routing across email, phone, and
+    web, defined entitlement processes with SLA milestones, and migrated 600
+    knowledge articles with a new taxonomy.
+  outcome:
+    - "First-response time down 62%"
+    - "SLA compliance visible in real time for the first time"
+    - "Deflection through Knowledge handling ~18% of inbound"
+
+- title: Automation debt cleanup after three acquisitions
+  client: Manufacturing · 1,200 users
+  year: 2024
+  tags: [Flow, Apex, Data model]
+  featured: false
+  problem: >-
+    Three merged orgs meant duplicate objects, conflicting validation rules, and
+    a nightly batch job that had been failing silently for months.
+  work: >-
+    Audited every automation across the org, produced a dependency map, then
+    consolidated onto a single object model with a phased migration plan the
+    internal team could execute.
+  outcome:
+    - "Duplicate objects reduced from 11 to 4"
+    - "Nightly batch runtime cut from 5.5 hours to 40 minutes"
+    - "Handover documentation the in-house admin still maintains"

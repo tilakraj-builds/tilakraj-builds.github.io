@@ -1,0 +1,34 @@
+{%- assign p = include.p -%}
+<article class="card project-card">
+  <div class="project-head">
+    <div>
+      <h3 class="project-title">{{ p.title }}</h3>
+      <p class="project-client">{{ p.client }}{% if p.year %} · {{ p.year }}{% endif %}</p>
+    </div>
+    {%- if p.tags -%}
+    <ul class="tag-list">
+      {%- for t in p.tags -%}<li class="tag">{{ t }}</li>{%- endfor -%}
+    </ul>
+    {%- endif -%}
+  </div>
+
+  <div class="project-body">
+    <div class="project-block">
+      <p class="project-label">The problem</p>
+      <p>{{ p.problem }}</p>
+    </div>
+    <div class="project-block">
+      <p class="project-label">What I did</p>
+      <p>{{ p.work }}</p>
+    </div>
+  </div>
+
+  {%- if p.outcome -%}
+  <div class="project-outcome">
+    <p class="project-label">Outcome</p>
+    <ul class="check-list">
+      {%- for o in p.outcome -%}<li>{{ o }}</li>{%- endfor -%}
+    </ul>
+  </div>
+  {%- endif -%}
+</article>

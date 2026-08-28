@@ -1,0 +1,22 @@
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <p class="footer-name">{{ site.author.name }}</p>
+      <p class="footer-role">{{ site.author.role }}{% if site.author.location %} · {{ site.author.location }}{% endif %}</p>
+    </div>
+
+    <nav class="footer-links" aria-label="Footer">
+      <a href="{{ '/work/' | relative_url }}">Work</a>
+      <a href="{{ '/blog/' | relative_url }}">Blog</a>
+      <a href="{{ '/about/' | relative_url }}">About</a>
+      <a href="{{ '/contact/' | relative_url }}">Contact</a>
+      <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+    </nav>
+
+    {% include social.html %}
+  </div>
+  <div class="wrap footer-legal">
+    <p>© {{ 'now' | date: "%Y" }} {{ site.author.name }}. Built with Jekyll, hosted on GitHub Pages.</p>
+    <p class="footer-disclaimer">Salesforce and the Salesforce logo are trademarks of Salesforce, Inc. This site is not affiliated with or endorsed by Salesforce.</p>
+  </div>
+</footer>

@@ -1,0 +1,8 @@
+- group: Clouds
+  items: [Sales Cloud, Service Cloud, Experience Cloud, CPQ]
+- group: Build
+  items: [Apex, Lightning Web Components, Flow, SOQL, Platform Events]
+- group: Platform
+  items: [Data modelling, Sharing & security, Deployment & CI, Data migration]
+- group: Ways of working
+  items: [Discovery workshops, Process mapping, Admin enablement, Documentation]

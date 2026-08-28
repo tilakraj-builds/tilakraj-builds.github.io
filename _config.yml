@@ -1,0 +1,89 @@
+# ─────────────────────────────────────────────────────────────
+#  EDIT THIS FILE FIRST. Everything below shows up on the site.
+# ─────────────────────────────────────────────────────────────
+
+title: Tilak Raj
+tagline: Salesforce Consultant
+description: >-
+  Salesforce consultant helping revenue and service teams turn their CRM
+  into infrastructure they can actually rely on — clean data models,
+  automation that scales, and adoption that sticks.
+
+url: "https://tilakraj-builds.github.io"
+baseurl: ""
+
+# ── Who you are ──────────────────────────────────────────────
+author:
+  name: Tilak Raj
+  role: Salesforce Consultant
+  # Short line under your name on the homepage hero.
+  headline: I help teams turn Salesforce into revenue infrastructure.
+  # 2–3 sentences. This is the "About" paragraph.
+  bio: >-
+    I'm a Salesforce consultant working with mid-market and enterprise teams on
+    Sales Cloud, Service Cloud, and the messy middle where process meets platform.
+    Most of my work starts the same way: someone's org has grown faster than its
+    data model, and the automation nobody documented is now the thing everybody
+    is afraid to touch.
+  location: India
+  email: tilakraj1456@gmail.com
+  # Leave any of these blank ("") to hide the icon.
+  linkedin: "https://www.linkedin.com/in/your-handle"
+  github: "https://github.com/tilakraj-builds"
+  trailhead: "https://www.salesforce.com/trailblazer/your-handle"
+  twitter: ""
+  # Optional: drop a PDF at assets/resume.pdf and set this to /assets/resume.pdf
+  resume: ""
+  # Optional: a booking link (Calendly, Cal.com). Leave "" to hide the button.
+  calendar: ""
+  # Optional: a Formspree endpoint (https://formspree.io — free tier is fine).
+  # Set this to turn the contact page's form on. Leave "" and the page shows
+  # your email and links instead. GitHub Pages is static, so a form needs a
+  # third-party endpoint like this one to actually deliver mail.
+  formspree: ""
+
+# Shown as a small pill in the hero. Set `available: false` to hide it.
+available: true
+availability_text: "Available for new engagements"
+
+# ── Headline numbers on the homepage ─────────────────────────
+stats:
+  - value: "6+"
+    label: "Years on the platform"
+  - value: "25+"
+    label: "Orgs delivered"
+  - value: "4"
+    label: "Salesforce certifications"
+
+# ── Build settings — you generally don't need to touch these ──
+theme_color: "#0176d3"
+timezone: Asia/Kolkata
+permalink: /blog/:year/:month/:day/:title/
+markdown: kramdown
+kramdown:
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: /feed.xml
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post

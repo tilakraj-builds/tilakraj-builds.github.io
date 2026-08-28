@@ -1,0 +1,30 @@
+---
+layout: default
+title: Work
+permalink: /work/
+---
+<section class="section page-head">
+  <div class="wrap">
+    <p class="eyebrow">Case studies</p>
+    <h1 class="page-title">Selected work</h1>
+    <p class="lede">Each engagement below started with something concrete that was broken. Client names are withheld where the work is under NDA; outcomes are measured against the baseline at kickoff.</p>
+  </div>
+</section>
+
+<section class="section section-tight">
+  <div class="wrap stack">
+    {%- for p in site.data.projects -%}
+      {% include project-card.html p=p %}
+    {%- endfor -%}
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap cta-inner">
+    <h2 class="cta-title">Something similar on your plate?</h2>
+    <p class="cta-sub">Happy to walk through how I'd approach it — no pitch deck required.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}">Get in touch</a>
+    </div>
+  </div>
+</section>

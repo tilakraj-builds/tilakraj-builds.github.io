@@ -1,0 +1,18 @@
+# Your Salesforce certifications.
+# `year` is optional. `credential` is an optional verification link.
+- name: Salesforce Certified Administrator
+  short: Administrator
+  year: 2021
+  credential: ""
+- name: Salesforce Certified Platform Developer I
+  short: Platform Developer I
+  year: 2022
+  credential: ""
+- name: Salesforce Certified Sales Cloud Consultant
+  short: Sales Cloud Consultant
+  year: 2023
+  credential: ""
+- name: Salesforce Certified Service Cloud Consultant
+  short: Service Cloud Consultant
+  year: 2024
+  credential: ""

@@ -1,0 +1,12 @@
+{%- case include.name -%}
+{%- when 'pipeline' -%}
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18M5 10h14M8 15h8M11 20h2"/></svg>
+{%- when 'support' -%}
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 13a8 8 0 0 1 16 0"/><rect x="2.5" y="13" width="4" height="6" rx="1.6"/><rect x="17.5" y="13" width="4" height="6" rx="1.6"/><path d="M20 19v.6a2.4 2.4 0 0 1-2.4 2.4H13"/></svg>
+{%- when 'flow' -%}
+  <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="6" height="5" rx="1.4"/><rect x="15" y="9" width="6" height="5" rx="1.4"/><rect x="3" y="16" width="6" height="5" rx="1.4"/><path d="M9 5.5h3.5a1.5 1.5 0 0 1 1.5 1.5v2M9 18.5h3.5a1.5 1.5 0 0 0 1.5-1.5v-2"/></svg>
+{%- when 'data' -%}
+  <svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="6" rx="7.5" ry="3"/><path d="M4.5 6v6c0 1.66 3.36 3 7.5 3s7.5-1.34 7.5-3V6"/><path d="M4.5 12v6c0 1.66 3.36 3 7.5 3s7.5-1.34 7.5-3v-6"/></svg>
+{%- else -%}
+  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v8M8 12h8"/></svg>
+{%- endcase -%}

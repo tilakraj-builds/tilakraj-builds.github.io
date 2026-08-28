@@ -1,0 +1,169 @@
+---
+layout: default
+title: Salesforce Consultant
+---
+
+<section class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      {%- if site.available -%}
+      <p class="pill"><span class="pill-dot" aria-hidden="true"></span>{{ site.availability_text }}</p>
+      {%- endif -%}
+      <h1 class="hero-title">{{ site.author.headline }}</h1>
+      <p class="hero-sub">{{ site.description }}</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}">Work with me</a>
+        <a class="btn btn-ghost" href="{{ '/work/' | relative_url }}">See case studies</a>
+      </div>
+      {%- if site.stats and site.stats.size > 0 -%}
+      <dl class="stats">
+        {%- for s in site.stats -%}
+        <div class="stat">
+          <dt class="stat-value">{{ s.value }}</dt>
+          <dd class="stat-label">{{ s.label }}</dd>
+        </div>
+        {%- endfor -%}
+      </dl>
+      {%- endif -%}
+    </div>
+
+    <aside class="hero-card" aria-label="At a glance">
+      <p class="hero-card-title">Currently</p>
+      <ul class="hero-card-list">
+        <li><span>Role</span><strong>{{ site.author.role }}</strong></li>
+        <li><span>Based in</span><strong>{{ site.author.location }}</strong></li>
+        <li><span>Focus</span><strong>Sales &amp; Service Cloud</strong></li>
+        <li><span>Certifications</span><strong>{{ site.data.certifications | size }}</strong></li>
+      </ul>
+      {% include social.html %}
+    </aside>
+  </div>
+</section>
+
+{%- if site.data.services and site.data.services.size > 0 -%}
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Services</p>
+      <h2 class="section-title">How I help</h2>
+      <p class="section-sub">Four things I get called in for most often. Engagements run from a two-week audit to a full multi-quarter implementation.</p>
+    </div>
+    <div class="grid grid-services">
+      {%- for s in site.data.services -%}
+      <article class="card service-card">
+        <span class="service-icon" aria-hidden="true">{% include service-icon.html name=s.icon %}</span>
+        <h3 class="card-title">{{ s.title }}</h3>
+        <p class="card-body">{{ s.summary }}</p>
+        {%- if s.points -%}
+        <ul class="check-list">
+          {%- for pt in s.points -%}<li>{{ pt }}</li>{%- endfor -%}
+        </ul>
+        {%- endif -%}
+      </article>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+{%- endif -%}
+
+{%- assign featured = site.data.projects | where: "featured", true -%}
+{%- if featured.size == 0 -%}{%- assign featured = site.data.projects -%}{%- endif -%}
+{%- if featured.size > 0 -%}
+<section class="section section-alt" id="work">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Selected work</p>
+      <h2 class="section-title">Problems, and what happened next</h2>
+      <p class="section-sub">Client names are withheld where engagements are under NDA. Numbers are measured against the baseline at kickoff.</p>
+    </div>
+    <div class="stack">
+      {%- for p in featured limit: 2 -%}
+      {% include project-card.html p=p %}
+      {%- endfor -%}
+    </div>
+    {%- if site.data.projects.size > 2 -%}
+    <p class="section-more"><a class="link-arrow" href="{{ '/work/' | relative_url }}">All case studies <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></p>
+    {%- endif -%}
+  </div>
+</section>
+{%- endif -%}
+
+{%- if site.data.certifications and site.data.certifications.size > 0 -%}
+<section class="section" id="certifications">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Credentials</p>
+      <h2 class="section-title">Certifications</h2>
+    </div>
+    <ul class="grid grid-certs">
+      {%- for c in site.data.certifications -%}
+      <li class="card cert-card">
+        <span class="cert-badge" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2.8 4.6 6.2v5.1c0 4.6 3.1 8.8 7.4 10 4.3-1.2 7.4-5.4 7.4-10V6.2L12 2.8Z"/><path class="cert-tick" d="M8.8 12.2l2.3 2.3 4.1-4.6"/></svg>
+        </span>
+        <div>
+          <p class="cert-name">{{ c.short | default: c.name }}</p>
+          <p class="cert-meta">Salesforce Certified{% if c.year %} · {{ c.year }}{% endif %}</p>
+          {%- if c.credential and c.credential != "" -%}
+          <a class="cert-link" href="{{ c.credential }}" target="_blank" rel="noopener">Verify</a>
+          {%- endif -%}
+        </div>
+      </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</section>
+{%- endif -%}
+
+{%- if site.data.experience and site.data.experience.size > 0 -%}
+<section class="section section-alt" id="experience">
+  <div class="wrap wrap-narrow">
+    <div class="section-head">
+      <p class="eyebrow">Background</p>
+      <h2 class="section-title">Experience</h2>
+    </div>
+    <ol class="timeline">
+      {%- for job in site.data.experience -%}
+      <li class="timeline-item">
+        <span class="timeline-dot" aria-hidden="true"></span>
+        <p class="timeline-years">{{ job.start }} — {{ job.end }}</p>
+        <h3 class="timeline-role">{{ job.role }}</h3>
+        <p class="timeline-company">{{ job.company }}</p>
+        <p class="timeline-summary">{{ job.summary }}</p>
+      </li>
+      {%- endfor -%}
+    </ol>
+  </div>
+</section>
+{%- endif -%}
+
+{%- if site.posts.size > 0 -%}
+<section class="section" id="writing">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Writing</p>
+      <h2 class="section-title">From the blog</h2>
+      <p class="section-sub">Notes on the platform — what worked, what broke, and what I'd do differently.</p>
+    </div>
+    <div class="grid grid-posts">
+      {%- for post in site.posts limit: 3 -%}
+        {% include post-card.html post=post %}
+      {%- endfor -%}
+    </div>
+    <p class="section-more"><a class="link-arrow" href="{{ '/blog/' | relative_url }}">Read all posts <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a></p>
+  </div>
+</section>
+{%- endif -%}
+
+<section class="cta">
+  <div class="wrap cta-inner">
+    <h2 class="cta-title">Got an org that's outgrown its setup?</h2>
+    <p class="cta-sub">Tell me what's breaking. If I'm not the right person, I'll say so and point you somewhere better.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="{{ '/contact/' | relative_url }}">Start a conversation</a>
+      {%- if site.author.calendar and site.author.calendar != "" -%}
+      <a class="btn btn-ghost" href="{{ site.author.calendar }}" target="_blank" rel="noopener">Book a call</a>
+      {%- endif -%}
+    </div>
+  </div>
+</section>
