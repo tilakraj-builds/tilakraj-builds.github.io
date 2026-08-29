@@ -40,7 +40,7 @@ author:
   # Set this to turn the contact page's form on. Leave "" and the page shows
   # your email and links instead. GitHub Pages is static, so a form needs a
   # third-party endpoint like this one to actually deliver mail.
-  formspree: ""
+  formspree: "https://formspree.io/f/xwlkpelr"
 
 # Shown as a small pill in the hero. Set `available: false` to hide it.
 available: true
